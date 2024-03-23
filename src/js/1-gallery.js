@@ -94,9 +94,6 @@ const galleryHTML = images.map(({ preview, original, description }) => {
 
 galleryContainer.innerHTML = galleryHTML;
 
-const modal = document.createElement('div');
-modal.classList.add('modal');
-document.body.appendChild(modal);
 
 
 
@@ -104,33 +101,4 @@ document.body.appendChild(modal);
 
 
 
-galleryContainer.addEventListener(`click`, getImage);
 
-function getImage(event) {
-event.preventDefault();
-event.stopPropagation();
-
-    if (event.target.nodeName !== "IMG") { return; }
-    else
-    {
-        const imageObject = images.find(image => event.target.dataset.source === image.original);
-        if (imageObject)
-        {
-            const instance = basicLightbox.create(`
-    <div class="modal">
-    
-        <img class="original-image" src ="${imageObject.original}" >
-    </div>
-`)
-            
-            instance.show();
-            
-          
-          instance.element().querySelector('.original-image').addEventListener('click', function() {
-        instance.close();
-          })
-            
-        };
-    }
-    
-}
