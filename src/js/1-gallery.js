@@ -83,7 +83,7 @@ galleryContainer.style.listStyleType = `none`;
 const galleryHTML = images.map(({ preview, original, description }) => {
     
     return `<li class="gallery-item" style="width: calc((100% - 2 * 24px) / 3); height: auto;">
-  <a class="gallery-link" href="${original}">
+  <a class="gallery-link" href="${original}" title="${description}">
     <img
       class="gallery-image"
       src="${preview}"
