@@ -1,3 +1,5 @@
+
+
 import SimpleLightbox from "simplelightbox";
 
 import "simplelightbox/dist/simple-lightbox.min.css";
@@ -94,11 +96,4 @@ const galleryHTML = images.map(({ preview, original, description }) => {
 
 galleryContainer.innerHTML = galleryHTML;
 
-
-
-
-
-
-
-
-
+const lightbox = new SimpleLightbox('.gallery-link');
