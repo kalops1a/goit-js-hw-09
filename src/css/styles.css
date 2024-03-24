@@ -6,76 +6,57 @@
 
 
 .feedback-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+}
 
-.feedback-form input[type="email"],
+.feedback-form input,
 .feedback-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
- 
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+  padding: 8px;
   transition: border-color 0.3s ease;
-
 }
-
 
 .feedback-form input[type="email"]:hover,
-.feedback-form textarea:hover {
-  border-color: #999;
-  
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
+  border-color: rgba(0, 0, 0, 1);
 }
-
-
-.feedback-form input[type="email"]:active,
-.feedback-form textarea:active {
-  border-color: #666;
-  
-}
-
-
-.feedback-form textarea::placeholder {
-  color: #999;
-  
-}
-
-
-.feedback-form button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 10px;
- 
-  background-color: blue;
-  
-  color: white;
-  
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
-}
-
-
-.feedback-form button[type="submit"]:hover {
-  background-color: darkblue;
-  
-}
-
-
-.feedback-form button[type="submit"]:active {
-  background-color: navy;
- 
-}
-
 
 .feedback-form textarea {
   resize: none;
+}
+
+.feedback-form button[type="submit"] {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: rgba(78, 117, 255, 1);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feedback-form button[type="submit"]:hover {
+  background-color: rgba(108, 140, 255, 1);
+}
+
+
+.feedback-form input[type="email"]::placeholder,
+.feedback-form textarea::placeholder {
+  color: transparent;
+}
+
+.feedback-form input[type="email"]:active::placeholder,
+.feedback-form textarea:active::placeholder {
+  
+  color: rgba(46, 47, 66, 1);
 }
