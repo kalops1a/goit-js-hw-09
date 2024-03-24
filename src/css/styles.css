@@ -11,7 +11,7 @@
   gap: 8px;
   width: 408px;
   height: auto;
-
+padding: 24px;
 
   font-family: "Montserrat", sans-serif;
  line-height: 24px;
@@ -29,13 +29,18 @@
 .feedback-form textarea {
   border: 1px solid rgba(128, 128, 128, 1);
   border-radius: 4px;
+  width: 360px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
   padding-right: 16px;
-  
+  margin-top: 8px;
   transition: border-color 0.3s ease;
 }
+.feedback-form input {
+  height: 40px;
+}
+
 
 .feedback-form input[type="email"]:hover,
 .feedback-form input[type="email"]:focus,
@@ -50,12 +55,15 @@
 
 .feedback-form button[type="submit"] {
   border: none;
+  width:95;
   border-radius: 8px;
   padding: 8px 16px;
   background-color: rgba(78, 117, 255, 1);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 16px;
+  margin-right: auto;
 }
 
 .feedback-form button[type="submit"]:hover {
@@ -65,6 +73,11 @@
 
 .feedback-form input[type="email"]::placeholder,
 .feedback-form textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 4%;
   color: transparent;
 }
 
