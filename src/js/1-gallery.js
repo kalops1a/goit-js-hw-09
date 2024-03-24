@@ -97,3 +97,8 @@ const galleryHTML = images.map(({ preview, original, description }) => {
 galleryContainer.innerHTML = galleryHTML;
 
 const lightbox = new SimpleLightbox('.gallery-link');
+
+const options = {
+        captionsData: 'alt', 
+        captionsDelayTime: 250 
+    };
