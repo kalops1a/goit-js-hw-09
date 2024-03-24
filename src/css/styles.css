@@ -9,6 +9,15 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 408px;
+  height: auto;
+
+  
+  font-family: "Montserrat", sans-serif;
+ line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 4%;
 }
 
 .feedback-form label {
@@ -42,7 +51,7 @@
   background-color: rgba(78, 117, 255, 1);
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .feedback-form button[type="submit"]:hover {
@@ -56,7 +65,9 @@
 }
 
 .feedback-form input[type="email"]:active::placeholder,
-.feedback-form textarea:active::placeholder {
+.feedback-form textarea:active::placeholder,
+.feedback-form input[type="email"]:focus::placeholder,
+.feedback-form textarea:focus::placeholder {
   
   color: rgba(46, 47, 66, 1);
 }
