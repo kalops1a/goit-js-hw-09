@@ -10,8 +10,8 @@ const loadFormData = () => {
 
 const saveFormData = () => {
     const formData = {
-        email: form.elements.email.value,
-        message: form.elements.message.value
+        email: form.elements.email.value.trim(),
+        message: form.elements.message.value.trim()
     };
     localStorage.setItem(localStorageKey, JSON.stringify(formData));
 };
@@ -23,9 +23,14 @@ form.addEventListener(`input`, (event) => {
 form.addEventListener(`submit`, (event) => {
 event.preventDefault();
     const formData = {
-        email: form.elements.email.value,
-        message: form.elements.message.value
+        email: form.elements.email.value.trim(),
+        message: form.elements.message.value.trim()
     };
+    if (email === "" || message === "") {
+      alert("Please fill in both email and message fields!");
+      return; 
+    }
+
     console.log(formData);
 
     
