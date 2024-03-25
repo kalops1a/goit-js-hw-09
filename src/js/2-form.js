@@ -26,7 +26,7 @@ event.preventDefault();
         email: form.elements.email.value.trim(),
         message: form.elements.message.value.trim()
     };
-    if (email === "" || message === "") {
+    if (formData.email === "" || formData.message === "") {
       alert("Please fill in both email and message fields!");
       return; 
     }
